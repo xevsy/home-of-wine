@@ -18,7 +18,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "heroku-prebuild": "echo This runs before Heroku installs your dependencies.",
-    "heroku-postbuild": "echo This runs afterwards."
+    "heroku-prebuild": "yarn run build",
+    "heroku-postbuild": "serve -s build"
   }
 }
