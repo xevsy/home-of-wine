@@ -1,8 +1,12 @@
 import React from 'react'
+import Header from './Header'
 
 const AddItem = () => (
-  <div>
-    Add new wine item
+  <div className="App">
+    <Header />
+    <div>
+      Add new wine item
+    </div>
   </div>
 );
 
