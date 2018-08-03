@@ -1,10 +1,18 @@
-import React from 'react'
-import NavBar from './NavBar'
+import React from 'react';
+import NavBar from './NavBar';
+import { connect } from 'react-redux';
+import { startLogin, startLogout } from '../actions/auth';
 
 const Header = () => (
   <div>
-    <NavBar />
+    <NavBar startLogin={startLogin()} startLogout={startLogout()} />
   </div>
 );
 
-export default Header;
+const mapDispatchToProps = (dispatch) => ({
+  startLogin: () => dispatch(startLogin()),
+  startLogout: () => dispatch(startLogout())
+});
+
+
+export default connect(undefined, mapDispatchToProps)(Header);
